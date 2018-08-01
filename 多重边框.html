@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>多重边框</title>
+		<style type="text/css">
+			body{
+				/* 基于父元素的子元素垂直居中样式 */
+				background-color: aquamarine;
+				display: flex;
+				min-height: 100vh;
+				margin: 0;
+			}
+			.main{
+				
+				/* 自垂直居中样式 */
+				height: 200px;
+				width: 400px;
+				display: flex;     
+				align-items: center;     
+				justify-content: center;        
+				margin: auto;
+			}
+			.two{
+				background: black; 
+				border: 20px solid grey; 
+				outline: 1px dashed white;
+				outline-offset: -10px;
+			}
+			.many{
+				background: whitesmoke; 
+				box-shadow: 0 0 0 20px orange,             
+							0 0 0 30px green,
+							0 0 0 40px red,
+							0 2px 5px 15px rgba(0,0,0,.6);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main two">
+			两层边框演示
+		</div>
+		<div class="main many">
+			多重边框演示
+		</div>
+	</body>
+</html>

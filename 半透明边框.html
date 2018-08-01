@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>半透明边框</title>
+		<style type="text/css">
+			body{
+				/* 基于父元素的子元素垂直居中样式 */
+				background-color: aquamarine;
+				display: flex;
+				min-height: 100vh;
+				margin: 0;
+			}
+			.main{
+				
+				/* 自垂直居中样式 */
+				height: 200px;
+				width: 400px;
+				display: flex;     
+				align-items: center;     
+				justify-content: center;        
+				margin: auto;
+				
+				/* 表示半透明边框样式 */
+				border: 35px solid hsla(0,0%,100%,.5); 
+				background: white; 
+				background-clip: padding-box;//背景不会绘制到padding中最重要的一个样式
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			这是半透明边框的文字部分
+		</div>
+	</body>
+</html>
