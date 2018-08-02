@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>单侧投影</title>
+		<style type="text/css">
+			.main{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: auto;
+				width: 200px;
+				height: 200px;
+				background: #FFA500;
+			}
+			.main1{
+				box-shadow: 0 5px 4px -4px black;
+			}
+			.main2{
+				box-shadow: 3px 3px 6px -3px black;
+			}
+			.main3{
+				box-shadow: 5px 0 5px -5px black,
+							-5px 0 5px -5px black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main main1">
+			单侧投影
+		</div>
+		<hr >
+		<div class="main main2">
+			领边投影
+		</div>
+		<hr >
+		<div class="main main3">
+			双侧投影
+		</div>
+	</body>
+</html>

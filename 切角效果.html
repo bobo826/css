@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>切角效果</title>
+		<style type="text/css">
+			.main{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: auto;
+				background: #8A2BE2;
+				color: white;
+				width: 200px;
+				height: 200px;
+			}
+			.main1{
+				background:linear-gradient(-45deg, transparent 15px, #8A2BE2 0) right;
+				/*渐变可以接受一个角度，其色标可以接受绝对值*/
+			}
+			.main2{
+				background: linear-gradient(-45deg, transparent 15px, #58a 0) right,
+							linear-gradient(45deg, transparent 15px, #655 0) left; 
+				background-size: 50% 100%; 
+				background-repeat: no-repeat;
+			}
+			.main3{
+				background: linear-gradient(135deg,transparent 15px, #58a 0) top left,     
+							linear-gradient(-135deg, transparent 15px, #58a 0) top right,     
+							linear-gradient(-45deg, transparent 15px, #58a 0) bottom right,     
+							linear-gradient(45deg, transparent 15px, #58a 0) bottom left; 
+				background-size: 50% 50%; 
+				background-repeat: no-repeat;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="main main1">
+			只切掉右下角的
+		</div>
+		<div class="main main2">
+			只切掉左/右下角的
+		</div>
+		<div class="main main3">
+			只切掉所有角的
+		</div>
+	</body>
+</html>

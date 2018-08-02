@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>菱形图片</title>
+		<style type="text/css">
+			.imgbox{
+				width: 400px;
+				height: 400px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: auto;
+			}
+			img{
+				clip-path:polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+			    transition: 1s clip-path; 
+			} 
+ 
+			img:hover {
+				clip-path: polygon(0 0, 100% 0,100% 100%, 0 100%); 
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="imgbox">
+			<img src="img/img1.png" alt="img1.png" />
+		</div>
+	</body>
+</html>
