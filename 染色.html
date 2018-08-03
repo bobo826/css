@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>染色</title>
+		<style type="text/css">
+			.imgbox{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: auto;
+				width: 400px;
+				height: 400px;
+			}
+			img{
+				transition: .5s filter;     
+				filter: sepia(1) saturate(4) hue-rotate(295deg); 
+				max-width: 100%;
+			}
+			img:hover, img:focus {
+				filter: none; 
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="imgbox">
+			<img src="img/img1.png" alt="img1.png" >
+		</div>
+	</body>
+</html>

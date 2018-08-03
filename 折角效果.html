@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>折角效果</title>
+		<style type="text/css">
+			.note {     
+				position: relative;     
+				background: #58a; /* 回退样式 */     
+				background: linear-gradient(-150deg,transparent 1.5em, #58a 0);     
+				border-radius: .5em; 
+				padding: 40px;
+				width: 100px;
+				color: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: auto;
+			} 
+			.note::before {     
+				content: '';     
+				position: absolute;     
+				top: 0; 
+				right: 0;     
+				background: linear-gradient(to left bottom,transparent 50%, rgba(0,0,0,.2) 0, rgba(0,0,0,.4))100% 0 no-repeat;     
+				width: 1.73em;     
+				height: 3em;     
+				transform: translateY(-1.3em) rotate(-30deg);     
+				transform-origin: bottom right;     
+				border-bottom-left-radius: inherit;     
+				box-shadow: -.2em .2em .3em -.1em rgba(0,0,0,.15); 
+			}
+			.text{
+				background: #5588AA;
+				width: 100px;
+				color: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: auto;
+				hyphens: auto;/* 连字符断行 */
+				-moz-hyphens: auto;
+				-ms-hyphens: auto;
+				-webkit-hyphens: auto;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="note">
+			折角文本
+		</div>
+		<div class="text">
+			hyphens it is not simpale
+		</div>
+	</body>
+</html>
