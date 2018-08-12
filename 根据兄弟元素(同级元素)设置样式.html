@@ -14,18 +14,19 @@
 				top: 0;
 				display: inline-block;
 				border-radius: 5px;
-				background: #8A2BE2;
+				background: red;
 				color: white;
 				text-align: center;
 				padding: 15px 20px;
 				margin: 0 10px;
 			}
-			li:first-child:nth-last-child(n+2):nth-last-child(-n+6), 
-			li:first-child:nth-last-child(n+2):nth-last-child(-n+6) ~ li {
+			/* 当列表包含2～3项时，命中所有列表项
+			li:first-child:nth-last-child(n+2):nth-last-child(-n+4), 
+			li:first-child:nth-last-child(n+2):nth-last-child(-n+4) ~ li {
 				background: #FFA500;
 			}
-			li:first-child:nth-last-child(n+2):nth-last-child(-n+6)::before, 
-			li:first-child:nth-last-child(n+2):nth-last-child(-n+6) ~ li::before{
+			li:first-child:nth-last-child(n+2):nth-last-child(-n+4)::before, 
+			li:first-child:nth-last-child(n+2):nth-last-child(-n+4) ~ li::before{
 				position: absolute;
 				content: "√";
 				width: 20px;
@@ -35,6 +36,42 @@
 				right: -5px;
 				top: -5px;
 			}
+			*/ 
+			/*当列表至少包含3项时，命中所有列表项 */
+			li:first-child:nth-last-child(n+3), 
+			li:first-child:nth-last-child(n+3) ~ li {
+				background: #FFA500;
+			}
+			li:first-child:nth-last-child(n+3)::before, 
+			li:first-child:nth-last-child(n+3) ~ li::before{
+				position: absolute;
+				content: "√";
+				width: 20px;
+				height: 20px;
+				border-radius: 10px;
+				background: #9ACD32;
+				right: -5px;
+				top: -5px;
+			}
+			
+			
+			/* 当列表包含1～3项时，命中所有列表项
+			li:first-child:nth-last-child(-n+3), 
+			li:first-child:nth-last-child(-n+3) ~ li {
+				background: #FFA500;
+			}
+			li:first-child:nth-last-child(-n+3)::before, 
+			li:first-child:nth-last-child(-n+3) ~ li::before{
+				position: absolute;
+				content: "√";
+				width: 20px;
+				height: 20px;
+				border-radius: 10px;
+				background: #9ACD32;
+				right: -5px;
+				top: -5px;
+			}
+			*/
 		</style>
 	</head>
 	<body>
@@ -55,6 +92,13 @@
 			<li>2</li>
 			<li>3</li>
 			<li>4</li>
+		</ul>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
 		</ul>
 	</body>
 </html>
